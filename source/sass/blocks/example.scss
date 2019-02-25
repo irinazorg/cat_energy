@@ -1,0 +1,149 @@
+.example {
+  background-color: #f2f2f2;
+  padding: 25px 0 35px;
+}
+
+.example__wrapper {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.example__title {
+  margin-bottom: 35px;
+}
+
+.example__results  {
+  margin: 0 auto;
+}
+
+.example__second-section {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.example__description {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.example__cost {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text-color-dark;
+}
+
+.example__controls {
+  margin: 0 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background: linear-gradient(to bottom,#ffffff 550px 551px,#eaeaea 551px 1000px);
+  }
+
+  .example__wrapper {
+    overflow: hidden;
+    box-sizing: content-box;
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .example__title {
+    margin-bottom: 60px;
+  }
+
+  .example__results-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__results  {
+    margin: 0;
+  }
+
+  .example__cost {
+    margin: 10px 0 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+
+    & span {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+
+  .example__second-section {
+    width: 708px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    background: linear-gradient(to bottom,#ffffff 200px 201px,#f2f2f2 201px 1000px);
+    padding: 25px 0 65px;
+  }
+
+  .example__wrapper {
+    width: 1220px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .example__first-section {
+    width: 420px;
+  }
+
+  .example__second-section {
+    width: auto;
+    margin: 0;
+  }
+
+  .example__title {
+    margin-top: 45px;
+    margin-bottom: 145px;
+  }
+
+  .example__description {
+    margin-bottom: 75px;
+  }
+
+  .example__second-section {
+    width: 650px;
+  }
+
+  .example__results-wrapper {
+    flex-direction: column;
+  }
+
+  .example__cost {
+    margin: 60px 0 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+
+    & span {
+      display: inline-block;
+      margin-top: 0;
+      margin-left: 64px;
+    }
+  }
+}

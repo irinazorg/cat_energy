@@ -1,0 +1,46 @@
+{
+  "name": "cat-energy",
+  "version": "14.0.0",
+  "private": true,
+  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "8.3.x",
+    "grunt": "^1.0.3",
+    "grunt-browser-sync": "2.2.x",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-csso": "^2.2.4",
+    "grunt-postcss": "0.9.x",
+    "grunt-sass": "^2.1.0",
+    "grunt-svgstore": "^2.0.0",
+    "load-grunt-tasks": "^4.0.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "grunt sass && grunt postcss",
+    "start": "npm run build && grunt serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "8.11"
+  }
+}

@@ -1,0 +1,190 @@
+.benefits {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.benefits__title {
+  margin-bottom: 35px;
+}
+
+.benefits__list {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  list-style: none;
+  font-family:  "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.benefits__item {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 550px;
+  margin-bottom: 30px;
+  padding-left: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    margin-top: -30px;
+    left: 0;
+    background-color: $main-color;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+  }
+
+  &--health::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--ease::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--eating::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--result::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .benefits {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #e6e6e6;
+      bottom: 25px;
+      left: 0;
+    }
+  }
+
+  .benefits__wrapper {
+    width: 708px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+  }
+
+  .benefits__title {
+    margin-bottom: 60px;
+  }
+
+  .benefits__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .benefits__item {
+    box-sizing: border-box;
+    max-width: auto;
+    width: 324px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    padding: 115px 120px 60px 0;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 0;
+      margin-top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1000;
+      top: -39px;
+      right: 100px;
+      text-align: center;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 281px;
+      line-height: 281px;
+      color: #f2f2f2;
+    }
+
+    &--health::after {
+      content: "1";
+    }
+
+    &--ease::after {
+      content: "2";
+    }
+
+    &--eating::after {
+      content: "3";
+    }
+
+    &--result::after {
+      content: "4";
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .benefits {
+     &::after {
+      content: "";
+      display: none;
+    }
+  }
+
+  .benefits__wrapper {
+    width: 1220px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+  }
+
+  .benefits__title {
+    margin-bottom: 70px;
+  }
+
+  .benefits__list {
+    justify-content: space-between;
+  }
+
+  .benefits__item {
+    width: 245px;
+    margin-right: 0;
+    margin-bottom: 40px;
+    padding: 115px 20px 60px 0;;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &::after {
+      top: -39px;
+      right: 20px;
+    }
+  }
+}

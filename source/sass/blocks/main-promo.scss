@@ -1,0 +1,119 @@
+.main-promo {
+  padding-top: 25px;
+  margin-bottom: 22px;
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat center top,
+              linear-gradient(to bottom,#63a73a 305px 306px,#ffffff 306px 500px);
+  color: $white-color;
+}
+
+.main-promo__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.main-promo__text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-promo__img {
+  margin-bottom: 3px;
+}
+
+.main-promo__button {
+  min-width: 240px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-promo {
+    padding-top: 50px;
+    margin-bottom: 0;
+    background-image: none;
+    color: $text-color-dark;
+  }
+
+  .main-promo__wrapper {
+    min-height: 820px;
+    position: relative;
+    padding-left: 90px;
+  }
+
+  .main-promo__title {
+    width: 450px;
+    margin-bottom: 45px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .main-promo__text {
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .main-promo__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -500;
+    width: 709px;
+    height: auto;
+  }
+
+  .main-promo__button {
+    min-width: auto;
+  }
+}
+
+@media (min-width: 1300px) {
+  .main-promo {
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 80px;
+  }
+  
+  .main-promo::after {
+      content: "";
+      position: absolute;
+      z-index: -1000;
+      width: 50%;
+      height: calc(100% + 120px);
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+      top: -120px;
+      right: 0; 
+  }
+
+  .main-promo__wrapper {
+    min-height: 570px;
+    padding-left: 82px; 
+  }
+
+  .main-promo__img {
+    bottom: 50px;
+    left: 450px;
+    width: 552px;
+    height: auto; 
+  } 
+
+  .main-promo__title {
+    padding-top: 100px;
+    margin-bottom: 45px;
+    text-align: left;
+  }
+}

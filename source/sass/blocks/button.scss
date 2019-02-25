@@ -1,0 +1,35 @@
+.button {
+  box-sizing: border-box;
+  display: inline-block;
+  color: #ffffff;
+  background-color: $main-color;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 18px;
+  font-size: 14px;
+  padding: 18px 20px;
+  word-wrap: break-word;
+  text-decoration: none;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $main-color-darker;
+  }
+
+  &:focus {
+    outline: 2px solid $main-color-contradiction;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    line-height: 20px;
+    font-size: 20px;
+    padding: 18px 25px;
+  }
+}

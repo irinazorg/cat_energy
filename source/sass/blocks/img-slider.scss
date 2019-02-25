@@ -1,0 +1,114 @@
+.img-slider__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.img-slider__picture {
+  margin-bottom: 25px;
+}
+
+.img-slider__button {
+  background-color: transparent;
+  border: none;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text-color-dark;
+  cursor: pointer;
+}
+
+@media (max-width: $mobile-width-only) {
+  .img-slider__controls-wrapper {
+    position: relative;
+  }
+
+  .img-slider__control {
+    width: 82px;
+    height: 12px;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    border-radius: 50px;
+ }
+
+  .img-slider__slide {
+    position: absolute;
+    top: 4px;
+    height: 6px;
+    left: 6px;
+    right: 50%;
+    background-color: $main-color;
+    border-radius: 25px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .img-slider__controls {
+    width: 570px;
+    margin-bottom: 15px;
+  }
+
+  .img-slider__controls-wrapper {
+    position: relative;
+  }
+
+  .img-slider__control {
+    width: 428px;
+    height: 6px;
+    background-color: #dcdcdc;
+    border-radius: 50px;
+  }
+
+  .img-slider__button {
+    padding: 0;
+    padding-bottom: 6px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    border-bottom: 1px dotted #a9a9a9;
+
+    &:hover, &:focus {
+      border-bottom: 1px solid #a9a9a9;
+    }
+
+    &:active {
+      border-bottom: none;
+      padding-bottom: 7px;
+    }
+  }
+
+  .img-slider__slide {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: $main-color;
+    border-radius: 50%;
+    border: 12px solid #ffffff;
+    box-shadow: 0px 2px 3px 1px #cdcdcd;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      box-shadow: 0px 3px 4px 1px #bdbdbd;
+    }
+
+    &:active {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .img-slider__controls {
+    width: auto;
+  }
+
+  .img-slider__picture {
+    margin-bottom: 40px;
+  }
+}
